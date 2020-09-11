@@ -8,8 +8,10 @@ bsound has one configuration format and that is a dynamic library - just build i
 
 ## Usage
 
-Use the `bsound_*_init` functions to initialize an opcode, `bsound_*_perf` to execute its functionality, and `bsound_*_destroy` to destroy the opcode. After initializing and opcode's struct, you can directly modify its properties as appropriate. Nevertheless, it's advisable to only modify the same properties as would be exposed to a Csound application using the opcode, and not any of the opcode's internal state. Some of the variable names can be difficult to understand, but thankfully [the Csound reference manual](https://csound.com/docs/manual/PartReference.html) is very helpful in this regard.
+Use the `bsound_*_init` functions to initialize an opcode, `bsound_*_perf` to execute its functionality, and `bsound_*_destroy` to destroy the opcode. After initializing an opcode's struct, you can directly modify its properties as appropriate. Nevertheless, it's advisable to only modify the same properties as would be exposed to a Csound application using the opcode, and not any of the opcode's internal state. Some of the variable names can be difficult to understand, but thankfully [the Csound reference manual](https://csound.com/docs/manual/PartReference.html) is very helpful in this regard.
+
+(Depending on your project, you may want to change some of the `#define`s and function/variable names in `csoundcompat.h`, since some of them are fairly generic and might conflict with your code).
 
 ## Licensing
 
-Just like Csound, bsound is licensed under the LGPL 2.1 - full details are in the LICENSE file. Much of the code in this repository keeps copyright notices from the original files from which they were derived. Nevertheless, they are modified version.
+Just like Csound, bsound is licensed under the LGPL 2.1 - full details are in the LICENSE file. Much of the code in this repository keeps copyright notices from the original files from which they were derived. Nevertheless, they are modified versions.
